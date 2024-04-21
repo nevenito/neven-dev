@@ -1,5 +1,7 @@
 import { Tranquiluxe, Velustro } from "uvcanvas";
 import ProjectsSection from "./_components/ProjectsSection";
+import Link from "next/link";
+import Button from "../_shared/ui/Button";
 
 export default function Home() {
   return (
@@ -14,6 +16,12 @@ export default function Home() {
       </div>
 
       <ProjectsSection />
+      <section className="mx-20 rounded mb-20 grid justify-center text-center gap-4 py-10 bg-green-500">
+        <h2>Try Mall Builder 3000!</h2>
+        <Link href="/mall">
+          <Button>Go to Mall Builder 3000</Button>
+        </Link>
+      </section>
       {/* <h1 className="text-6xl font-bold">Hello World</h1> */}
     </main>
   );
