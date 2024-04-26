@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " flex flex-col h-screen w-screen text-black bg-gray-950 overflow-x-hidden"
+          " flex h-screen w-screen flex-col overflow-x-hidden bg-gray-950"
         }
       >
         {children}
