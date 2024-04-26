@@ -66,6 +66,7 @@ const HeroSection = () => {
               priority
               alt="Hero image"
               sizes="40vw"
+              placeholder="blur"
             />
           </div>
           <div className="absolute z-30 flex h-[50vh] w-full xl:h-[60vh]  ">
@@ -75,6 +76,7 @@ const HeroSection = () => {
               priority
               alt="Hero image"
               sizes="40vw"
+              placeholder="blur"
             />
           </div>
           <div className="absolute z-20 flex h-[40vh] w-full xl:h-[50vh]  ">
@@ -84,6 +86,7 @@ const HeroSection = () => {
               priority
               alt="Hero image"
               sizes="40vw"
+              placeholder="blur"
             />
           </div>
         </div>
