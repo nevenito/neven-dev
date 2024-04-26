@@ -3,14 +3,8 @@ import Section from "./Section";
 import Image from "next/image";
 import Chequy from "@/app/_shared/ui/Chequy";
 import Link from "next/link";
-import {
-  ArrowBigDown,
-  ArrowDown,
-  ArrowDownCircle,
-  ArrowDownToDotIcon,
-  LucideSquareArrowDown,
-  SquareArrowDown,
-} from "lucide-react";
+import mountains from "@/public/mountains.webp";
+import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -54,44 +48,42 @@ const HeroSection = () => {
         </div>
 
         <div className="relative hidden items-center py-10 lg:flex">
-          <div className="absolute z-50 hidden h-[80vh]">
+          <div className="absolute left-0 z-50 h-[70vh] w-full xl:h-[80vh]">
             <Image
-              src="https://utfs.io/f/f85f70f3-b3df-4292-b801-ad77e6f8e180-edeaqt.jpg"
-              width={1920}
-              height={1080}
-              className="z-40  object-contain "
+              src={mountains}
+              className="absolute inset-0 z-50 h-full w-max object-contain"
               priority
               alt="Hero image"
+              sizes="40vw"
+              placeholder="blur"
+              // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNceWBlPQAGvwKTI01O6AAAAABJRU5ErkJggg=="
             />
           </div>
-          <div className="absolute z-40 flex h-[70vh] translate-x-16  ">
+          <div className="absolute z-40 flex h-[60vh] w-full xl:h-[70vh]  ">
             <Image
-              src="https://utfs.io/f/f85f70f3-b3df-4292-b801-ad77e6f8e180-edeaqt.jpg"
-              width={1920}
-              height={1080}
-              className="z-50  object-contain "
+              src={mountains}
+              className="absolute inset-0 left-[20%] z-40 h-full w-max object-contain"
               priority
               alt="Hero image"
+              sizes="40vw"
             />
           </div>
-          <div className="absolute z-30 flex h-[60vh] translate-x-32  ">
+          <div className="absolute z-30 flex h-[50vh] w-full xl:h-[60vh]  ">
             <Image
-              src="https://utfs.io/f/f85f70f3-b3df-4292-b801-ad77e6f8e180-edeaqt.jpg"
-              width={1920}
-              height={1080}
-              className="z-30 object-contain"
+              src={mountains}
+              className="absolute inset-0 left-[40%] z-30 h-full w-max object-contain"
               priority
               alt="Hero image"
+              sizes="40vw"
             />
           </div>
-          <div className=" z-20 flex h-[50vh] translate-x-48  ">
+          <div className="absolute z-20 flex h-[40vh] w-full xl:h-[50vh]  ">
             <Image
-              src="https://utfs.io/f/f85f70f3-b3df-4292-b801-ad77e6f8e180-edeaqt.jpg"
-              width={1920}
-              height={1080}
-              className="z-20 object-contain"
+              src={mountains}
+              className="absolute inset-0 left-[60%] z-20 h-full w-max object-contain"
               priority
               alt="Hero image"
+              sizes="40vw"
             />
           </div>
         </div>
