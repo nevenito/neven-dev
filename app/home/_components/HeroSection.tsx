@@ -11,15 +11,19 @@ const HeroSection = () => {
     <Section id="hero" noHeader noPadding>
       <div className="mb-20 grid h-[92vh] grid-cols-1 lg:grid-cols-2">
         <div className="grid content-center items-center gap-12">
-          <div className="text-5xl font-semibold lg:text-4xl xl:text-4xl 2xl:text-5xl">
-            <h1 className="text-gray-100">Hey there, I&#39;m Neven.</h1>
-            <h1 className="text-primary ">A creative web developer</h1>
-            <h1 className="text-gray-100">with 5 years of experience</h1>
-          </div>
+          <span className="text-5xl font-semibold text-gray-100 lg:text-4xl xl:text-4xl 2xl:text-5xl">
+            <p>Hey there, I&#39;m Neven.</p>
+            <span className="text-primary">
+              A creative web developer{" "}
+              <p className="inline text-gray-100 lg:block">
+                with 5 years of experience
+              </p>
+            </span>
+          </span>
 
           <Link
             href="#services"
-            className="flex items-center gap-4 text-xl font-light uppercase text-white xl:text-xl"
+            className="flex items-center gap-4 text-lg font-light uppercase text-white lg:text-xl xl:text-xl"
           >
             <p>Development</p>
             <Chequy />

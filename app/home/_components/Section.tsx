@@ -21,7 +21,7 @@ const Section = ({
     <section
       id={id}
       className={cn(
-        "px-standard scroll-mt-[8vh]",
+        "scroll-mt-[8vh] px-8 lg:px-standard",
         !alternate ? "bg-background" : "bg-muted",
         !noPadding && "pb-20 pt-10",
         className,
