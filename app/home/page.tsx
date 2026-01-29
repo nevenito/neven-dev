@@ -2,6 +2,9 @@ import ProjectsSection from "./_components/ProjectsSection";
 import Header from "./_components/Header";
 import AboutSection from "./_components/AboutSection";
 import HeroSection from "./_components/HeroSection";
+import ServicesSection from "./_components/ServicesSection";
+import ContactSection from "./_components/ContactSection";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -11,15 +14,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-
-      {/* <Section id="mall" alternate noHeader>
-        <div className="snap-section mx-20 mb-20 grid snap-none justify-center gap-4 rounded bg-green-500 py-10 text-center">
-          <h2>Try Mall Builder 3000!</h2>
-          <Link href="/mall">
-            <Button variant="default">Go to Mall Builder 3000</Button>
-          </Link>
-        </div>
-      </Section> */}
+      <ServicesSection />
+      <ContactSection />
+      <Footer />
     </main>
   );
 }
