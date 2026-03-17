@@ -6,11 +6,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Neven Zdelar - Creative Web Developer",
+  title: "Neven Zdelar | Web, mobile, and desktop apps that feel finished",
   description:
-    "Personal website of Neven Zdelar, a web developer specializing in delivering high-quality websites. Check out my portfolio and contact me for your next project!",
+    "Neven Zdelar builds web, mobile, and desktop apps with eight years of hands-on delivery, strong frontend taste, and a track record of shipping AI-heavy products for real clients.",
   keywords:
-    "web developer, react, nextjs, portfolio, projects, contact, frontend, developer, neven zdelar, neven, zdelar, frontend developer, front end, design, ai, chatbot, web design, website builder, web designer, website creator, stranica, web stranica",
+    "neven zdelar, web app developer, mobile app developer, desktop app developer, ai product ui, frontend engineer, upwork top rated plus, product design implementation, creative frontend developer",
 };
 
 export default function RootLayout({

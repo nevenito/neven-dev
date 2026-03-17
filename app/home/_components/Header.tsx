@@ -12,6 +12,11 @@ import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
+const navItems = [
+  { href: "#track-record", label: "Track Record" },
+  { href: "#build", label: "What I Build" },
+];
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -23,19 +28,15 @@ const Header = () => {
       </Link>
       <nav className="hidden lg:block">
         <ul className="flex justify-center gap-16 text-white">
-          <Link className="hover:opacity-90" href="#about">
-            About
-          </Link>
-          <Link className="hover:opacity-90" href="#projects">
-            Projects
-          </Link>
-          <Link className="hover:opacity-90" href="#services">
-            Services
-          </Link>
+          {navItems.map((item) => (
+            <Link key={item.href} className="hover:opacity-90" href={item.href}>
+              {item.label}
+            </Link>
+          ))}
         </ul>
       </nav>
       <Link href="#contact" className="ml-auto hidden lg:block">
-        <Button>Contact</Button>
+        <Button>Get in touch</Button>
       </Link>
 
       <Sheet open={open} onOpenChange={setOpen}>
@@ -48,30 +49,19 @@ const Header = () => {
         <SheetContent className="mt-[8vh]">
           <nav className="mt-8 flex flex-col items-end justify-end gap-12">
             <ul className="grid justify-end gap-8 text-right text-3xl text-white">
-              <Link
-                className="hover:opacity-90"
-                href="#about"
-                onClick={() => setOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                className="hover:opacity-90"
-                href="#projects"
-                onClick={() => setOpen(false)}
-              >
-                Projects
-              </Link>
-              <Link
-                className="hover:opacity-90"
-                href="#services"
-                onClick={() => setOpen(false)}
-              >
-                Services
-              </Link>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  className="hover:opacity-90"
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </ul>
             <Link href="#contact" onClick={() => setOpen(false)}>
-              <Button>Contact</Button>
+              <Button>Get in touch</Button>
             </Link>
           </nav>
         </SheetContent>
