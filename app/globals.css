@@ -6,49 +6,104 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes hero-badge-glow {
-  0%,
-  100% {
-    box-shadow:
-      0 10px 30px rgba(255, 104, 0, 0.18),
-      0 0 0 rgba(255, 214, 10, 0);
-  }
-  50% {
-    box-shadow:
-      0 14px 38px rgba(255, 104, 0, 0.24),
-      0 0 26px rgba(255, 214, 10, 0.28);
-  }
-}
-
-@keyframes hero-badge-shift {
-  0% {
-    background-position: 0% 50%;
-    filter: saturate(1) brightness(1);
-  }
-  50% {
-    background-position: 100% 50%;
-    filter: saturate(1.08) brightness(1.05);
-  }
-  100% {
-    background-position: 0% 50%;
-    filter: saturate(1) brightness(1);
+@keyframes hero-gallery-scroll {
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @layer components {
-  .hero-upwork-pill {
-    background: linear-gradient(
-      120deg,
-      #ffe04d 0%,
-      #ff9f1c 28%,
-      #ff4f4f 56%,
-      #ff9f1c 78%,
-      #ffe04d 100%
-    );
-    background-size: 220% 220%;
-    animation:
-      hero-badge-glow 3.2s ease-in-out infinite,
-      hero-badge-shift 5.2s linear infinite;
+  .hero-mountains {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-mountains {
+      --gallery-gap: clamp(1.1rem, 2.2vw, 2rem);
+      contain: layout paint;
+      display: block;
+      height: clamp(360px, 68svh, 640px);
+      isolation: isolate;
+      overflow: hidden;
+      position: relative;
+      pointer-events: none;
+      transform: translateX(0.5rem) rotate(-2deg);
+    }
+
+    .hero-mountain-rail {
+      --panel-height: calc(100% - clamp(2rem, 5svh, 4rem));
+      --scroll-duration: 74s;
+      align-items: center;
+      animation: hero-gallery-scroll var(--scroll-duration) linear infinite;
+      display: flex;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .hero-mountain-rail--rear {
+      display: none;
+    }
+
+    .hero-mountain-rail--middle {
+      display: none;
+    }
+
+    .hero-mountain-rail--front {
+      filter: saturate(1.1) contrast(1) brightness(1.03);
+    }
+
+    .hero-mountain-panel {
+      --panel-lift: 0%;
+      --panel-tilt: 0deg;
+      aspect-ratio: var(--hero-ratio);
+      background-image: var(--hero-image);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 4px;
+      box-shadow: none;
+      flex: 0 0 auto;
+      height: var(--panel-height);
+      margin-right: var(--gallery-gap);
+      opacity: 1;
+      transform: translateY(var(--panel-lift)) rotate(var(--panel-tilt));
+    }
+
+    .hero-mountain-panel:nth-child(5n + 1) {
+      --panel-lift: 1.5%;
+      --panel-tilt: -1.4deg;
+    }
+
+    .hero-mountain-panel:nth-child(5n + 2) {
+      --panel-lift: -2%;
+      --panel-tilt: 1.2deg;
+    }
+
+    .hero-mountain-panel:nth-child(5n + 3) {
+      --panel-lift: 2%;
+      --panel-tilt: -0.8deg;
+    }
+
+    .hero-mountain-panel:nth-child(5n + 4) {
+      --panel-lift: -1.5%;
+      --panel-tilt: 1.4deg;
+    }
+
+    .hero-mountain-panel:nth-child(5n + 5) {
+      --panel-lift: 1.8%;
+      --panel-tilt: -1.1deg;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-mountain-rail {
+      animation: none;
+    }
   }
 }
 

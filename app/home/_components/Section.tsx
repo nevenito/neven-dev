@@ -27,24 +27,24 @@ const Section = ({
     <section
       id={id}
       className={cn(
-        "scroll-mt-[8vh] px-8 lg:px-standard",
+        "scroll-mt-24 px-6 sm:px-8 lg:px-standard",
         !alternate ? "bg-background" : "bg-muted",
-        !noPadding && "pb-20 pt-10",
+        !noPadding && "pb-16 pt-8",
         className,
       )}
     >
       {!noHeader && (
-        <div className="max-w-3xl pb-10 pt-5">
+        <div className="max-w-3xl pb-8 pt-3">
           {eyebrow && (
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#aebdff]">
               {eyebrow}
             </p>
           )}
-          <h2 className="text-4xl font-bold text-white lg:text-5xl">
+          <h2 className="font-serif text-5xl font-normal leading-tight text-white lg:text-6xl">
             {title ?? id}
           </h2>
           {intro && (
-            <p className="mt-4 max-w-2xl text-base leading-7 text-gray-300 lg:text-lg">
+            <p className="mt-3 max-w-2xl text-base leading-7 text-gray-300">
               {intro}
             </p>
           )}
