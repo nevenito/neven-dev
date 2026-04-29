@@ -9,7 +9,7 @@ const Chequy = ({ className = "size-5" }: Props) => (
     src="/chequy.png"
     width={24}
     height={24}
-    alt="cheq"
+    alt=""
     className={className}
   />
 );
