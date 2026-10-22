@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "claude/complete-portfolio-site-czMhE",
+    "main",
+    "neven/landing-nav-contrast"
+  ],
+  "parent": {
+    "claude/complete-portfolio-site-czMhE": "main",
+    "main": null,
+    "neven/landing-nav-contrast": "main"
+  },
+  "order": [
+    "main",
+    "claude/complete-portfolio-site-czMhE",
+    "neven/landing-nav-contrast"
+  ]
+}
